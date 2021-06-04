@@ -38,8 +38,9 @@ header {
   }
 }
 
+// iPhone default layout
 main {
-  display: flex;
+  display: block;
   gap: 1rem;
 
   article {
@@ -56,10 +57,26 @@ main {
 }
 
 .side-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
   border-radius: 4px;
   background-color: #eee;
+  margin-bottom: 1rem;
 }
+
+// Tablet / desktop layout
+@media screen and (min-width: 767px) {
+  main { 
+    display: flex;
+  }
+  .side-section {
+    display: block;
+  }
+}
+
+
 
 .info {
   display: grid;
