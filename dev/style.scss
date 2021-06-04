@@ -76,8 +76,6 @@ main {
   }
 }
 
-
-
 .info {
   display: grid;
   gap: 0.5rem;
@@ -136,3 +134,14 @@ main {
     background-color: black;
   }
 }
+
+.references {
+  display: block;
+}
+
+// @media (min-width: 1024px) {
+//   .references {
+//     display: grid;
+//     grid-template-columns: auto auto;
+//   }
+// }

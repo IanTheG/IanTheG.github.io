@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ian Goodwin Resume</title>
   </head>
-  <body>
+  <body onresize="showHideSkills()" onload="showHideSkills()">
 
     <header>
       <div>
@@ -38,9 +38,12 @@
           </a>
         </aside>
 
-        <aside>
-          <h2>Skills</h2>
-          <hr>
+        <h2>Skills</h2>
+        <hr>
+        <details id="skill-details">
+          <summary style="font-size: 0.8rem;">
+            show / hide
+          </summary>
           <div class="skills-ref">
             <div>
               <p>Beginner</p>
@@ -69,7 +72,7 @@
           </div>
           <hr>
           <div id="skills-box"></div>
-        </aside>
+        </details>
       </section>
 
       <section>
@@ -77,10 +80,10 @@
           <h2>Profile</h2>
           <hr>
           <p>
-            I am a web developer seeking a new job to gain experience and launch a career in software development.
-            I have experience developing full stack web applications, working in the AWS cloud, programming in multiple languages, and building REST APIs since October 2020.
-            My passion for coding and self-motivated attitude enables me to quickly learn a new concept independently or work together in a team.
-
+            I am a web developer seeking a full-time position to gain experience and launch a career in software development.
+            I have developed full stack web applications, worked in the AWS cloud, programmed in multiple languages, and built REST APIs.
+            My passion for coding and self-motivated attitude enables me to quickly learn a new concept independently or collaborate in a team.
+            I excel in communicating with clients and developers, adapting to priority changes, and exceeding quality standards.
           </p>
         </article>
 
@@ -95,6 +98,7 @@
             <p class="date">February and March 2021</p>
             <li>Certified AWS Cloud Practitioner</li>
             <p class="date">May 2021</p>
+            <li>Self-driven learning in AWS, TypeScript, Vue, Java, Groovy, SpringBoot, Python</li>
           </ul>
         </article>
 
@@ -106,10 +110,9 @@
             <p class="date">October 2020 - May 2021</p>
             <ul>
               <li>17-week React, Express, SQL, and Java coding bootcamp</li>
-              <li>Experience in Agile development cycle, microservices, Scrum standups and meetings</li>
-              <li>Self-driven learning in AWS, TypeScript, Vue, Java, SpringBoot, Python</li>
+              <li>Gained experience in the Agile development cycle, microservices, Scrum standups and meetings</li>
               <li>Shadowed a QA team lead, utilized test driven development (TDD): wrote unit, integration, and end-to-end tests in Jest, Cypress, and JUnit</li>
-              <li>Proficient in using VSCode, IntelliJ, JMeter, Postman, MySQL Workbench, PostreSQL</li>
+              <li>Proficient in using VSCode, IntelliJ, JMeter, Postman, MySQL Workbench, PG Admin for PostreSQL</li>
             </ul>
           </div>
           <div>
@@ -147,7 +150,7 @@
         <article>
           <h2>References</h2>
           <hr>
-          <ul>
+          <ul class="references">
             <div>
               <li>Sarah Cullen</li>
               <p>Director of Technical Instruction, Techtonic, Inc. </p>
@@ -164,6 +167,13 @@
               <p>Full Stack Engineer at Pyx Health</p>
             </div>
             <div>
+              <li>Michael Feldmann</li>
+              <p>Friend and Software Developer Intern at Mutual of Omaha</p>
+              <p>(402) 968-8152</p>
+              <a href="mailto: mjfeldmann1@gmail.com">mjfeldmann1@gmail.com</a>
+              <a href="mailto: michael.feldmann@mutualofomaha.com">michael.feldmann@mutualofomaha.com</a>
+            </div>
+            <div>
               <li>William (Tre) Silknitter</li>
               <p>Friend and software developer</p>
               <p>(402) 201-8774</p>
@@ -175,5 +185,12 @@
     </main>
     
     <script type="module" src="/main.js"></script>
+    <script>
+      function showHideSkills() {
+        const details = document.getElementById('skill-details');
+        window.innerWidth > 768 ? details.open = true : details.open = false;
+        // console.log(window.innerWidth, window.outerWidth);
+      }
+    </script>
   </body>
 </html>
