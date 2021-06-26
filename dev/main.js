@@ -6,6 +6,10 @@ const skills = [
     value: 3,
   },
   {
+    name: 'React Native',
+    value: 2,
+  },
+  {
     name: 'Angular',
     value: 1,
   },
@@ -18,16 +22,24 @@ const skills = [
     value: 3,
   },
   {
+    name: 'JavaScript',
+    value: 3,
+  },
+  {
     name: 'TypeScript',
     value: 3,
   },
   {
-    name: 'AWS',
+    name: 'AWS Cloud',
     value: 2,
   },
   {
     name: 'MongoDB',
     value: 3,
+  },
+  {
+    name: 'PostgreSQL',
+    value: 2,
   },
   {
     name: 'Redux',
@@ -57,10 +69,10 @@ const skills = [
     name: 'SpringBoot',
     value: 2,
   },
-  {
-    name: 'Groovy',
-    value: 1
-  },
+  // {
+  //   name: 'Groovy',
+  //   value: 1
+  // },
   {
     name: 'Git, GitHub',
     value: 2,
