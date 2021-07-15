@@ -11,7 +11,7 @@ const skills = [
   },
   {
     name: 'Angular',
-    value: 1,
+    value: 2,
   },
   {
     name: 'Vue',
@@ -83,7 +83,7 @@ const skills = [
   },
   {
     name: 'Express',
-    value: 3
+    value: 3,
   },
   {
     name: 'SQL',
@@ -97,13 +97,13 @@ const skills = [
   //   name: 'Max MSP',
   //   value: 2,
   // },
-];
+]
 
 skills.sort((a, b) => {
-  let skillA = a.name.toUpperCase();
-  let skillB = b.name.toUpperCase();
-  return skillA < skillB ? -1 : skillA > skillB ? 1 : 0;
-});
+  let skillA = a.name.toUpperCase()
+  let skillB = b.name.toUpperCase()
+  return skillA < skillB ? -1 : skillA > skillB ? 1 : 0
+})
 
 const rating = (value) => {
   switch (value) {
@@ -131,7 +131,9 @@ const rating = (value) => {
   }
 }
 
-let skillsHTML = ''.concat(...skills.map((skill) => `
+let skillsHTML = ''.concat(
+  ...skills.map(
+    (skill) => `
   <div class="skill-box">
   <h3>${skill.name}</h3>
   <div class="circle-box">
@@ -139,6 +141,7 @@ let skillsHTML = ''.concat(...skills.map((skill) => `
   </div>
   </div>
 `
-));
+  )
+)
 
-document.getElementById('skills-box').innerHTML = skillsHTML;
+document.getElementById('skills-box').innerHTML = skillsHTML
