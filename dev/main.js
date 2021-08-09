@@ -59,7 +59,7 @@ const skills = [
   },
   {
     name: 'Python',
-    value: 1,
+    value: 2,
   },
   {
     name: 'Java',
